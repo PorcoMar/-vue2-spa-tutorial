@@ -1,44 +1,76 @@
 <template>
   <div class="container">
-
-		<!-- 这是父组件内容 -->
-    <h4>子组件数据传递给父组件</h4>
-	  <p>方式：用自定义事件</p>
-	  <p class="text-center parent-tit">这是父组件</p>
-		<!-- 父组件可以在使用子组件的地方直接用 v-on 来监听子组件触发的事件。 -->
-		<h2 class="text-center">{{ totaler }}</h2>
-
-
-		<!-- 这是子组件内容  子组件名字自定义 这个标签也用这个名字-->
-		<div class="text-center">
-			<p>这是子组件</p>
-			<buttonCounter v-on:increment="plus"></buttonCounter>
-		  <buttonCounter v-on:increment="cale"></buttonCounter>
-		</div>
+  	<swiper :params="swiperParams" :Pages="Pages" v-on:slide="slider" v-on:onTap="onTap"></swiper>
+  	<p v-if="pagesA">pages is {{pagesA}}</p>
+  	<p v-show="pagesB">click show {{pagesB}}</p>
+		
 
   </div>
 </template>
 
+
 <script>
-	 import buttonCounter from '../components/thirdcomponent.vue'
+	 import swiper from '../components/swiper.vue'
 
 	 export default {
+	 		//el:'#app',
 			data () {
 				return {
 					parentMsg: '子组件传递信息给父元素',
-					totaler: 10
+					pagesA:'',
+					pagesB:'',
+					calen:'-',
+					plusn:'+',
+					swiperParams:{
+						  currentPage: 0,//当前页码
+				          thresholdDistance: 100,//滑动判定距离
+				          thresholdTime: 200,//滑动判定时间
+				          autoplay:2000,//自动滚动[ms]
+				          loop:true,//循环滚动
+				          direction:'horizontal',//方向设置，垂直滚动 vertical
+				          infinite:1,//无限滚动前后遍历数
+				          effect:'fade', //slide fade
+				          slidesToScroll:1,//一次翻几页
+				          timingFunction: 'ease', //linear ease
+				          duration: 300,//过度持续时间
+					},
+					Pages:[
+				          {
+				            title: 'slide1',
+				            style:{
+				             background:'url(http://www.haoniangjia.cn/img/new1.png)'
+				            }
+				          },
+				          {
+				           title: 'slide2',
+				           style:{
+				            background:'url(http://www.haoniangjia.cn/img/new2.png)'
+				            }
+				          },
+				          {
+				            title: 'slide3',
+				            style:{
+				              background:'url(http://www.haoniangjia.cn/img/up.png)',
+				            },
+				          }
+				        ]
 				}
 			},
 			methods: {
-			  plus: function () {
-			    this.totaler += 1
-			  },
-			  cale: function () {
-			    this.totaler -= 1
-			  }
+				
+				slider:function(arg){
+					console.log(arg)
+					this.pagesA = arg; 
+					
+				},
+				onTap:function(arg){
+					console.log('onTap pages is : ',arg)
+					this.pagesB = arg
+				}
+
 			},
 	    components: {
-	   	  buttonCounter
+				 swiper
 	    }
 	 }
 </script>

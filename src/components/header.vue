@@ -12,14 +12,14 @@
         }
     }
 </script>
-<style>
+<style lang = "scss">
     .header{
         width: 100%;
         margin: 0 auto;
-    }
-    .header img{
-        width: 50%;
-        margin: 30px auto 0;
-        display: block;
+        & img{
+            width: 50%;
+            margin: 30px auto 0;
+            display: block;  
+        }
     }
 </style>

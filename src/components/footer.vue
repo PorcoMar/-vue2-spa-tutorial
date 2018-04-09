@@ -44,6 +44,6 @@
         display: inline-block;
         font-size: 12px;
         color: #7a7a7a;
-        line-height: 50px;
+        line-height: 100px;
     }
 </style>

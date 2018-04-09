@@ -38,7 +38,7 @@ module.exports = {
       new webpack.ProvidePlugin({
           $: "jquery",
           jQuery: "jquery"
-      })
+      }),
    ],
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
@@ -82,7 +82,8 @@ module.exports = {
     postcss: [
       require('autoprefixer')({
         browsers: ['last 2 versions']
-      })
+      }),
+      require('postcss-px2rem')({remUnit: 75})
     ]
   }
 }

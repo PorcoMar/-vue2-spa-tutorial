@@ -10,6 +10,7 @@ import Index from '../pages/index.vue'
 import News from '../pages/news.vue'
 import secondcomponent from '../pages/otherPages.vue'
 import thirdcomponent from '../pages/otherPages2.vue'
+import newPage1 from '../pages/newPage1.vue'
 
 export default new VueRouter({
   mode: 'history',
@@ -30,6 +31,10 @@ export default new VueRouter({
     {
       path: '/third',
       component: thirdcomponent
+    },
+    {
+      path:'/newPage1',
+      component: newPage1
     }
   ]
 })

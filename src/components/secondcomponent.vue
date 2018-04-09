@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
-    <h4>这是子组件</h4>
-    <p>这是<span>来自父组件</span>的数据：{{myMessages}}</p>
+    <h4>这是子组件:{{myMessages}}</h4>
     <input type="text" v-model="myMessages" disabled placeholder="disabled"/>
   </div>
 </template>
@@ -18,12 +17,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang = "scss">
+
   .hello{
     margin-top: 30px;
+    @import './include_scss/p'
   }
   h4,p{
-    color: #41b883;;
     text-align: left;
     font-size: 20px;
   }
