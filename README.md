@@ -2,19 +2,9 @@
 > A Vue.js project with axios/vue-router/webpack
 
 
-## Live Demo
-The live demo can be found in [https://allan2coder.github.io/VUE2-SPA-Tutorial/](https://allan2coder.github.io/VUE2-SPA-Tutorial/) (移动端，打开浏览器开发者工具并调到手机窗口浏览。注：该项目同时适合PC端)
-
-
 ## How to use
 You should clone the repo and install the dependencies, and then npm start.That is all.
 
-```bash
-$ git clone https://github.com/allan2coder/VUE2-SPA-Tutorial.git
-$ cd VUE2-SPA-Tutorial
-$ npm install
-```
-Then launch the project app.
 
 ```bash
 $ npm start
@@ -27,9 +17,6 @@ You should see a new browser tap opening and a page of 'index.html' in http://lo
 ``` bash
 npm run build
 ```
-
-## [Lifecycle](http://www.jianshu.com/p/e9f884b6ba6c)
-![image](https://raw.githubusercontent.com/allan2coder/VUE2-SPA-Tutorial/master/screenShot/lifecycle.png)
 
 
 ## Router
@@ -128,15 +115,6 @@ background: url(./../assets/img/icon.png);
 ```
 
 
-## Other SPA(其他单页)
-- [React.js 2.x](https://github.com/allan2coder/React-SPA-Tutorial) :fire: :fire: :fire:
-- [Angularjs 2.x](https://github.com/allan2coder/Angular2-SPA)
 
 
-# Reference Articles
-* [Vue-Router](http://router.vuejs.org/zh-cn/essentials/getting-started.html)
-* [ECMAScript 6入门](http://es6.ruanyifeng.com/)
-* [Webpack 入门指迷](https://segmentfault.com/a/1190000002551952)
-* [webpack使用优化](https://github.com/lcxfs1991/blog/issues/2)
-* [vue guide](http://vuejs-templates.github.io/webpack/)
-* [docs for vue-loader](http://vuejs.github.io/vue-loader)
+
